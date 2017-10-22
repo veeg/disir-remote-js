@@ -1,0 +1,26 @@
+{
+  "name": "disir",
+  "version": "0.1.0",
+  "description": "Disir Remote client side library.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Vegard Sandengen",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "pbjs -t static-module -w commonjs -o ./dist/disirpb.js ./disir-protobuf/protobuf/disirpb.proto && pbts -o ./dist/disirpb.d.ts ./dist/disirpb.js",
+    "build": "tsc",
+    "pretest": "pbjs -t static-module -w commonjs -o ./dist/disirpb.js ./disir-protobuf/protobuf/disirpb.proto && pbts -o ./dist/disirpb.d.ts ./dist/disirpb.js",
+    "test": "mocha -r ts-node/register spec/**/*.spec.ts"
+  },
+  "dependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "protobufjs": "^6.7.3",
+    "ts-loader": "^2.0.3",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  }
+}

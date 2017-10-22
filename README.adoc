@@ -1,0 +1,26 @@
+= Disir.js
+
+This implements a javascript client library for Disir Remote backend communication,
+whose communication primitives is a client-server architecture that exchanges messages
+over protobuf. See www.github.com/veeg/disir-protobuf for the protobuf message definition.
+
+
+This library uses
+* Node.JS (> 4.0)
+* https://yarnpkg.com/en/docs/install[Yarn] to build and test
+* Typescript that is transpile into Javascript
+
+== Getting started with development
+
+After checking out the repository run `yarn` to retrieve all dependencies.
+If you do not have yarn installed, check the link above.
+
+Run `yarn test` to run all unit tests.
+
+== Using as a library
+
+This package is not published on NPM package registry. To use as a local file
+dependency, the JS files must have been build before we are able to use it
+correctly as a pure library dependency in another package.
+Run `yarn build` to create these files.
+
